@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>American Chess (Meme)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="page">
+
+    <button id="rulesToggleBtn" class="rules-toggle-btn" aria-label="Show Rules">Show Rules</button>
+
+    <div id="rulesPanel" class="rules-panel hidden">
+      <button id="rulesCloseBtn" class="rules-close-btn" aria-label="Close">&times;</button>
+      <div class="rules-eyebrow">Variant Notes</div>
+      <h2 class="rules-title">American Chess (Meme)</h2>
+      <p class="rules-text">
+        American Chess (Meme) follows standard English chess rules, but with no rooks, and bishops at f1 & f8 swapped places.
+      </p>
+      <p class="rules-meme-line">Inspired by the following meme:</p>
+      <img class="rules-meme-img" src="assets/meme.png" alt="Meme that inspired this chess variant" />
+      <p class="rules-placeholder">
+        <em>If Chess was Invented in America...</em>
+      </p>
+    </div>
+
+    <h1 class="title">American Chess (Meme)</h1>
+    <div id="statusMessage" class="status-message">White to move</div>
+
+    <div class="board-row">
+      <div class="eval-bar-wrap">
+        <div id="evalBarFill" class="eval-bar-fill"></div>
+        <span id="evalScoreLabel" class="eval-score-label">0.0</span>
+      </div>
+
+      <div id="board" class="board"></div>
+
+      <button id="flipBoardBtn" class="flip-board-btn" aria-label="Flip board" title="Flip board">&#8645;</button>
+    </div>
+
+    <div id="moveHistoryPanel" class="move-history-panel">
+      <h3 class="move-history-title">Move History</h3>
+      <div id="moveHistoryList" class="move-history-list"></div>
+    </div>
+
+    <div class="button-row">
+      <button id="restartBtn" class="action-btn btn-restart">Restart Game</button>
+      <button id="botMoveBtn" class="action-btn btn-bot-move">Bot Move</button>
+      <button id="botVsBotBtn" class="action-btn btn-bot-vs-bot">Bot vs Bot</button>
+      <button id="pauseBtn" class="action-btn btn-pause">Pause</button>
+    </div>
+
+    <p class="footnote">
+      Note: This chess variant is a humorous take on an American chess meme and is not intended to offend or disrespect any culture. It is meant purely for entertainment and creative exploration of chess variants.
+    </p>
+
+  </div>
+
+  <div id="promotionOverlay" class="promotion-overlay hidden">
+    <div class="promotion-box">
+      <div class="promotion-label">Promote to</div>
+      <div id="promotionChoices" class="promotion-choices"></div>
+    </div>
+  </div>
+
+  <script src="chess.js"></script>
+  <script src="bot.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
